@@ -1,0 +1,270 @@
+{
+	"version": "3",
+	"templates": [
+		{
+			"categories": [
+				"Cloud",
+				"Books"
+			],
+			"description": "Calibre Web is a web app providing a clean interface for browsing, reading and downloading eBooks using an existing Calibre database.\n\n  [br][br]\n  [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]\n  [b]/config[/b] Where Calibre-web should store it's database[br]\n  [b]/books[/b] Path to your calibre library metadata.db file[br]",
+			"env": [
+				{
+					"default": "1000",
+					"label": "PUID",
+					"name": "PUID"
+				},
+				{
+					"default": "1000",
+					"label": "PGID",
+					"name": "PGID"
+				}
+			],
+			"image": "linuxserver/calibre-web:latest",
+			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/calibre-web-icon.png",
+			"name": "calibre-web",
+			"platform": "linux",
+			"ports": [
+				"8083:8083/tcp"
+			],
+			"restart_policy": "unless-stopped",
+			"title": "Calibre Web",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/portainer/Books",
+					"container": "/books"
+				},
+				{
+					"bind": "/portainer/Files/AppData/Config/Calibre-web",
+					"container": "/config"
+				}
+			],
+			"note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://calibre-ebook.com/\" target=\"_blank\">https://calibre-ebook.com/</a><br><b>Official Docker Documentation: </b><a href=\"https://docs.linuxserver.io/images/docker-calibre-web\" target=\"_blank\">https://docs.linuxserver.io/images/docker-calibre-web</a><br><br><br>"
+		},
+		{
+			"categories": [
+				"HomeAutomation"
+			],
+			"description": "[Home Assistant Core](https://www.home-assistant.io/) - Open source home automation that puts local control and privacy first. Powered by a worldwide community of tinkerers and DIY enthusiasts. Perfect to run on a Raspberry Pi or a local server.",
+			"env": [
+				{
+					"default": "1000",
+					"label": "PGID",
+					"name": "PGID"
+				},
+				{
+					"default": "1000",
+					"label": "PUID",
+					"name": "PUID"
+				},
+				{
+					"default": "1",
+					"label": "HOMEASSITANT_CONFIG_UI",
+					"name": "HOMEASSITANT_CONFIG_UI"
+				},
+				{
+					"default": "8581",
+					"label": "HOMEASSITANT_CONFIG_UI_PORT",
+					"name": "HOMEASSITANT_CONFIG_UI_PORT"
+				},
+				{
+					"default": "America/New_York",
+					"label": "TZ",
+					"name": "TZ"
+				}
+			],
+			"image": "linuxserver/homeassistant:latest",
+			"logo": "https://github.com/home-assistant/home-assistant.io/raw/next/source/images/favicon-192x192-full.png",
+			"name": "home-assistant",
+			"network": "host",
+			"note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/homeassistant/config</p>",
+			"platform": "linux",
+			"privileged": true,
+			"restart_policy": "unless-stopped",
+			"title": "home-assistant",
+			"type": 1,
+			"ports": [
+				"8123:8123/tcp"
+			],
+			"volumes": [
+				{
+					"bind": "/portainer/Files/AppData/Config/home-assistant",
+					"container": "/home-assistant"
+				}
+			]
+		},
+		{
+			"categories": [
+				"HomeAutomation"
+			],
+			"description": "Homebridge allows you to integrate with smart home devices that do not natively support HomeKit. There are over 2,000 Homebridge plugins supporting thousands of different smart accessories.",
+			"env": [
+				{
+					"default": "1000",
+					"label": "PGID",
+					"name": "PGID"
+				},
+				{
+					"default": "1000",
+					"label": "PUID",
+					"name": "PUID"
+				},
+				{
+					"default": "1",
+					"label": "HOMEBRIDGE_CONFIG_UI",
+					"name": "HOMEBRIDGE_CONFIG_UI"
+				},
+				{
+					"default": "8582",
+					"label": "HOMEBRIDGE_CONFIG_UI_PORT",
+					"name": "HOMEBRIDGE_CONFIG_UI_PORT"
+				},
+				{
+					"default": "America/New_York",
+					"label": "TZ",
+					"name": "TZ"
+				}
+			],
+			"image": "oznu/homebridge:latest",
+			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/homebridge.png",
+			"name": "homebridge",
+			"network": "host",
+			"note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://homebridge.io/\" target=\"_blank\">https://homebridge.io/</a><br><b>Official Docker Documentation: </b><a href=\"https://github.com/homebridge/homebridge/wiki/Install-Homebridge-on-Docker\" target=\"_blank\">https://github.com/homebridge/homebridge/wiki/Install-Homebridge-on-Docker</a><br><br><br>Bringing HomeKit support where there is none",
+			"platform": "linux",
+			"privileged": true,
+			"restart_policy": "unless-stopped",
+			"title": "Homebridge",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/portainer/Files/AppData/Config/homebridge",
+					"container": "/homebridge"
+				}
+			]
+		},
+		{
+			"categories": [
+				"HomeAutomation"
+			],
+			"description": "Debian Homebridge allows you to integrate with smart home devices that do not natively support HomeKit. There are over 2,000 Homebridge plugins supporting thousands of different smart accessories.",
+			"env": [
+				{
+					"default": "1000",
+					"label": "PGID",
+					"name": "PGID"
+				},
+				{
+					"default": "1000",
+					"label": "PUID",
+					"name": "PUID"
+				},
+				{
+					"default": "1",
+					"label": "HOMEBRIDGE_CONFIG_UI",
+					"name": "HOMEBRIDGE_CONFIG_UI"
+				},
+				{
+					"default": "8581",
+					"label": "HOMEBRIDGE_CONFIG_UI_PORT",
+					"name": "HOMEBRIDGE_CONFIG_UI_PORT"
+				},
+				{
+					"default": "America/New_York",
+					"label": "TZ",
+					"name": "TZ"
+				}
+			],
+			"image": "oznu/homebridge:debian-arm32v7",
+			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/homebridge.png",
+			"name": "homebridge-debian",
+			"network": "host",
+			"note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://homebridge.io/\" target=\"_blank\">https://homebridge.io/</a><br><b>Official Docker Documentation: </b><a href=\"https://github.com/homebridge/homebridge/wiki/Install-Homebridge-on-Docker\" target=\"_blank\">https://github.com/homebridge/homebridge/wiki/Install-Homebridge-on-Docker</a><br><br><br>Bringing HomeKit support where there is none",
+			"platform": "linux",
+			"privileged": true,
+			"restart_policy": "unless-stopped",
+			"title": "Homebridge - Debian",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/portainer/Files/AppData/Config/debian-homebridge",
+					"container": "/homebridge"
+				}
+			]
+		},
+		{
+			"categories": [
+				"Other",
+				"Tools"
+			],
+			"description": "A dead simple static HOMepage for your servER to keep your s ervices on hand, from a simple yaml configuration file.",
+			"env": [
+				{
+					"default": "1000",
+					"label": "GID",
+					"name": "GID"
+				},
+				{
+					"default": "1000",
+					"label": "UID",
+					"name": "UID"
+				}
+			],
+			"image": "b4bz/homer:latest",
+			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/homer.png",
+			"name": "homer",
+			"note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://github.com/bastienwirtz/homer\" target=\"_blank\">https://github.com/bastienwirtz/homer</a><br><b>Official Docker Documentation: </b><a href=\"https://github.com/bastienwirtz/homer/blob/main/docs/configuration.md\" target=\"_blank\">https://github.com/bastienwirtz/homer/blob/main/docs/configuration.md</a><br><br><br><b>Youtube Video: </b><a href=\"https://www.youtube.com/watch?v=_d3J88ootYo&list=PL846hFPMqg3jwkxcScD1xw2bKXrJVvarc&index=2\" target=\"_blank\">Installing and Configuring Homer Dashboard</a><br><br>This container requires a yml file within the config volume. See the documentation here https://github.com/bastienwirtz/homer",
+			"platform": "linux",
+			"ports": [
+				"8902:8080/tcp"
+			],
+			"restart_policy": "unless-stopped",
+			"title": "Homer",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/portainer/Files/AppData/Config/Homer/assets",
+					"container": "/www/assets"
+				},
+				{
+					"bind": "/portainer/Files/AppData/Config/Homer",
+					"container": "/www/config.yml"
+				}
+			]
+		},
+		{
+			"categories": [
+				"Messenger"
+			],
+			"description": "ZNC is an IRC network bouncer or BNC. It can detach the client from the actual IRC server, and also from selected channels. Multiple clients from different locations can connect to a single ZNC account simultaneously and therefore appear under the same nickname on IRC.",
+			"env": [
+				{
+					"default": "1000",
+					"label": "PUID",
+					"name": "PUID"
+				},
+				{
+					"default": "1000",
+					"label": "PGID",
+					"name": "PGID"
+				}
+			],
+			"image": "linuxserver/znc:latest",
+			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/znc-icon.png",
+			"name": "znc",
+			"platform": "linux",
+			"ports": [
+				"6501:6501/tcp"
+			],
+			"restart_policy": "unless-stopped",
+			"title": "ZNC",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/portainer/Files/AppData/Config/ZNC",
+					"container": "/config"
+				}
+			],
+			"note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://wiki.znc.in/ZNC\" target=\"_blank\">https://wiki.znc.in/ZNC</a><br><b>Official Docker Documentation: </b><a href=\"https://docs.linuxserver.io/images/docker-znc\" target=\"_blank\">https://docs.linuxserver.io/images/docker-znc</a><br><br><br>"
+		}
+	]
+}
