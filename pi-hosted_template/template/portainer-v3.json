@@ -6,7 +6,7 @@
 				"HomeAutomation"
 			],
 			"description": "Home Assistant is a free and open-source software for home automation that is designed to be the central control system for smart home devices with focus on local control and privacy.",
-			"image": "linuxserver/homeassistant:latest",
+			"image": "ghcr.io/home-assistant/home-assistant:stable",
 			"logo": "https://github.com/home-assistant/home-assistant.io/raw/next/source/images/favicon-192x192-full.png",
 			"name": "home-assistant",
 			"platform": "linux",
