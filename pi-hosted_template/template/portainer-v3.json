@@ -81,6 +81,54 @@
 				}
 			],
 			"note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/homeassistant/config</p>"
+		},
+		{
+			"categories": [
+				"Video",
+				"Music",
+				"Photos"
+			],
+			"description": "Your favorite movies, TV, music, web shows, podcasts, and more, all streamed to your favorite screens.",
+			"env": [
+				{
+					"default": "1000",
+					"label": "PUID",
+					"name": "PUID"
+				},
+				{
+					"default": "1000",
+					"label": "PGID",
+					"name": "PGID"
+				},
+				{
+					"default": "latest",
+					"label": "VERSION",
+					"name": "VERSION"
+				}
+			],
+			"image": "linuxserver/plex:latest",
+			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/plex-icon.png",
+			"name": "plex",
+			"network": "host",
+			"platform": "linux",
+			"restart_policy": "unless-stopped",
+			"title": "Plex",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/portainer/Files/AppData/Config/Plex",
+					"container": "/config"
+				},
+				{
+					"bind": "/portainer/TV",
+					"container": "/tv"
+				},
+				{
+					"bind": "/portainer/Movies",
+					"container": "/movies"
+				}
+			],
+			"note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://www.plex.tv/\" target=\"_blank\">https://www.plex.tv/</a><br><b>Official Docker Documentation: </b><a href=\"https://docs.linuxserver.io/images/docker-plex\" target=\"_blank\">https://docs.linuxserver.io/images/docker-plex</a><br><br><br>"
 		}
 	]
 }
