@@ -393,6 +393,51 @@
 				}
 			],
 			"note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://coder.com/\" target=\"_blank\">https://coder.com/</a><br><b>Official Docker Documentation: </b><a href=\"https://docs.linuxserver.io/images/docker-code-server\" target=\"_blank\">https://docs.linuxserver.io/images/docker-code-server</a><br><br><br>"
+		},
+		{
+			"categories": [
+				"Downloaders",
+				"Tools"
+			],
+			"description": "JDownloader docker image",
+			"env": [
+				{
+					"default": "",
+					"label": "MYJD_DEVICE_NAME",
+					"name": "MYJD_DEVICE_NAME"
+				},
+				{
+					"default": "",
+					"label": "MYJD_USER",
+					"name": "MYJD_USER"
+				},
+				{
+					"default": "",
+					"label": "MYJD_PASSWORD",
+					"name": "MYJD_PASSWORD"
+				}
+			],
+			"image": "jaymoulin/jdownloader:latest",
+			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/jdownloader.png",
+			"name": "JDownloader",
+			"platform": "linux",
+			"ports": [
+				"3129:3129/tcp"
+			],
+			"restart_policy": "unless-stopped",
+			"title": "JDownloader",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/portainer/Files/AppData/Config/JDownloader",
+					"container": "/opt/JDownloader/cfg"
+				},
+				{
+					"bind": "/portainer/Downloads",
+					"container": "/opt/JDownloader/Downloads"
+				}
+			],
+			"note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://my.jdownloader.org/\" target=\"_blank\">https://my.jdownloader.org/</a><br><b>Official Docker Documentation: </b><a href=\"https://github.com/jaymoulin/docker-jdownloader\" target=\"_blank\">https://github.com/jaymoulin/docker-jdownloader</a><br><br><br><b>Youtube Video: </b><a href=\"https://www.youtube.com/watch?v=30MYRgCObu8&list=PL846hFPMqg3jwkxcScD1xw2bKXrJVvarc&index=4\" target=\"_blank\">Installing JDownloader and File Browser On The Pi Docker Server</a><br><br>"
 		}
 	]
 }
