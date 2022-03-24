@@ -148,7 +148,7 @@
 			"platform": "linux",
 			"ports": [
 				"1883:1883/tcp",
-				"9091:9091/tcp"
+				"9002:9001/tcp"
 			],
 			"restart_policy": "unless-stopped",
 			"title": "Eclipse Mosquitto",
