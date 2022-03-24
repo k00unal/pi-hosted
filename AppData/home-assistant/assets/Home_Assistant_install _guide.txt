@@ -1,0 +1,7 @@
+turorial:
+
+https://hometechhacker.com/mqtt-home-assistant-using-docker-eclipse-mosquitto/
+https://programozdazotthonod.hu/cookbook/installing-mosquitto/
+https://robert.stadsbygd.net/2020/03/24/mqtt-docker-for-home-assistant/
+
+loaded Home-Assistant and eclipse mosquitto in host mode not bridge.
