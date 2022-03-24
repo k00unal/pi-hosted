@@ -337,6 +337,10 @@
 				{
 					"bind": "/portainer/Files/AppData/Config/ncdata",
 					"container": "/data"
+				},
+				{
+					"bind": "/etc/localtime",
+					"container": "/etc/localtime"
 				}
 			]
 		},
