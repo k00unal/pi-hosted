@@ -1,0 +1,3 @@
+pi@raspberrypi:/portainer $ sudo chmod -R 777 ./Downloads
+
+permission require to run samba folder
