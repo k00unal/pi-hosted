@@ -106,7 +106,7 @@
 					"name": "VERSION"
 				}
 			],
-			"image": "linuxserver/plex:arm32v7-1.25.8",
+			"image": "linuxserver/plex:arm64v8-latest",
 			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/plex-icon.png",
 			"name": "plex",
 			"network": "host",
