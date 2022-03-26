@@ -336,7 +336,7 @@
 			"note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/nextcloud/config<br>mkdir -p /volume1/docker/nextcloud/data</p>",
 			"platform": "linux",
 			"ports": [
-				"8443:8443/tcp"
+				"443:443/tcp"
 			],
 			"restart_policy": "unless-stopped",
 			"title": "Nextcloud",
