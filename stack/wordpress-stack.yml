@@ -20,7 +20,7 @@ services:
       - db:db
 
   db:
-    image: jc21/mariadb-aria:latest
+    image: mysql:5.7
     restart: unless-stopped
     environment:
       MYSQL_DATABASE: wordpress
