@@ -252,10 +252,16 @@
 					"label": "CLI_ARGS",
 					"default": "",
 					"description": "Optionally pass cli start arguments to calibre."
+				},
+				{
+					"default": "Europe/London",
+					"description": "Specify a timezone to use for example EEurope/London",
+					"label": "TZ",
+					"name": "TZ"
 				}
 			],
 			"logo": "https://github.com/kovidgoyal/calibre/raw/master/resources/images/lt.png",
-			"image": "linuxserver/calibre",
+			"image": "lscr.io/linuxserver/calibre",
 			"name": "calibre",
 			"platform": "linux",
 			"ports": [
