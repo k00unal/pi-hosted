@@ -246,7 +246,7 @@
 				}
 			],
 			"logo": "https://github.com/kovidgoyal/calibre/raw/master/resources/images/lt.png",
-			"image": "lghcr.io/linuxserver/calibre:version-v5.14.0",
+			"image": "lghcr.io/linuxserver/calibre",
 			"name": "calibre",
 			"platform": "linux",
 			"ports": [
