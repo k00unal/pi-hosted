@@ -224,14 +224,19 @@
 			"description": "Calibre is a powerful and easy to use e-book manager. Users say it’s outstanding and a must-have. It’ll allow you to do nearly everything and it takes things a step beyond normal e-book software. It’s also completely free and open source and great for both casual users and computer experts.",
 			"env": [
 				{
-					"default": "998",
+					"default": "1000",
 					"label": "PUID",
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
+				},
+				{
+					"default": "/code/src",
+					"label": "CALIBRE_DEVELOP_FROM",
+					"name": "CALIBRE_DEVELOP_FROM"
 				},
 				{
 					"default": "Europe/London",
@@ -241,17 +246,25 @@
 				}
 			],
 			"logo": "https://github.com/kovidgoyal/calibre/raw/master/resources/images/lt.png",
-			"image": "linuxserver/calibre",
+			"image": "lghcr.io/linuxserver/calibre:version-v5.14.0",
 			"name": "calibre",
 			"platform": "linux",
 			"ports": [
-				"8080:8080/tcp",
-				"8081:8081/tcp"
+				"7384:8080/tcp",
+				"7385:8081/tcp"
 			],
 			"restart_policy": "unless-stopped",
 			"title": "Calibre",
 			"type": 1,
 			"volumes": [
+				{
+					"bind": "/portainer/Development/Calibre",
+					"container": "/code"
+				},
+				{
+					"bind": "/portainer/Books/Calibre Library",
+					"container": "/config/Calibre Library"
+				},
 				{
 					"bind": "/portainer/Books",
 					"container": "/books"
