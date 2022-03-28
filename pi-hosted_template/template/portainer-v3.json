@@ -179,6 +179,19 @@
 					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
+				},
+				{
+					"label": "GUAC_USER",
+					"name": "GUAC_USER"
+				},
+				{
+					"label": "GUAC_PASS",
+					"name": "PASSWORD"
+				},
+				{
+					"default": "002",
+					"label": "UMASK_SET",
+					"name": "UMASK_SET"
 				}
 			],
 			"image": "linuxserver/calibre-web:latest",
@@ -202,6 +215,67 @@
 				}
 			],
 			"note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://calibre-ebook.com/\" target=\"_blank\">https://calibre-ebook.com/</a><br><b>Official Docker Documentation: </b><a href=\"https://docs.linuxserver.io/images/docker-calibre-web\" target=\"_blank\">https://docs.linuxserver.io/images/docker-calibre-web</a><br><br><br>"
+		},
+		{
+			"categories": [
+				"Cloud",
+				"Books"
+			],
+			"description": "Calibre is a powerful and easy to use e-book manager. Users say it’s outstanding and a must-have. It’ll allow you to do nearly everything and it takes things a step beyond normal e-book software. It’s also completely free and open source and great for both casual users and computer experts.",
+			"env": [
+				{
+					"default": "1000",
+					"label": "PUID",
+					"name": "PUID"
+				},
+				{
+					"default": "1000",
+					"label": "PGID",
+					"name": "PGID"
+				},
+				{
+					"label": "GUAC_USER",
+					"name": "GUAC_USER"
+				},
+				{
+					"default": "",
+					"label": "GUAC_PASS",
+					"name": "PASSWORD"
+				},
+				{
+					"default": "002",
+					"label": "UMASK_SET",
+					"name": "UMASK_SET"
+				},
+				{
+					"name": "CLI_ARGS",
+					"label": "CLI_ARGS",
+					"default": "",
+					"description": "Optionally pass cli start arguments to calibre."
+				}
+			],
+			"logo": "https://github.com/kovidgoyal/calibre/raw/master/resources/images/lt.png",
+			"image": "linuxserver/calibre:latest",
+			"name": "calibre",
+			"platform": "linux",
+			"ports": [
+				"8080:8080/tcp",
+				"8081:8081/tcp"
+			],
+			"restart_policy": "unless-stopped",
+			"title": "Calibre",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/portainer/Books",
+					"container": "/books"
+				},
+				{
+					"bind": "/portainer/Files/AppData/Config/Calibre",
+					"container": "/config"
+				}
+			],
+			"note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/calibre/config</p>"
 		},
 		{
 			"categories": [
