@@ -189,7 +189,7 @@
 					"name": "PASSWORD"
 				},
 				{
-					"default": "002",
+					"default": "",
 					"label": "UMASK_SET",
 					"name": "UMASK_SET"
 				}
@@ -243,7 +243,7 @@
 					"name": "PASSWORD"
 				},
 				{
-					"default": "002",
+					"default": "",
 					"label": "UMASK_SET",
 					"name": "UMASK_SET"
 				},
@@ -255,7 +255,7 @@
 				}
 			],
 			"logo": "https://github.com/kovidgoyal/calibre/raw/master/resources/images/lt.png",
-			"image": "linuxserver/calibre:latest",
+			"image": "lscr.io/linuxserver/calibre",
 			"name": "calibre",
 			"platform": "linux",
 			"ports": [
