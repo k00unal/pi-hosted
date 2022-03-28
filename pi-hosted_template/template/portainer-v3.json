@@ -234,26 +234,6 @@
 					"name": "PGID"
 				},
 				{
-					"label": "GUAC_USER",
-					"name": "GUAC_USER"
-				},
-				{
-					"default": "",
-					"label": "GUAC_PASS",
-					"name": "PASSWORD"
-				},
-				{
-					"default": "",
-					"label": "UMASK_SET",
-					"name": "UMASK_SET"
-				},
-				{
-					"name": "CLI_ARGS",
-					"label": "CLI_ARGS",
-					"default": "",
-					"description": "Optionally pass cli start arguments to calibre."
-				},
-				{
 					"default": "Europe/London",
 					"description": "Specify a timezone to use for example EEurope/London",
 					"label": "TZ",
