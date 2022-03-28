@@ -255,7 +255,7 @@
 				}
 			],
 			"logo": "https://github.com/kovidgoyal/calibre/raw/master/resources/images/lt.png",
-			"image": "lscr.io/linuxserver/calibre",
+			"image": "linuxserver/calibre:arch-version-debd0b08",
 			"name": "calibre",
 			"platform": "linux",
 			"ports": [
