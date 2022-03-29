@@ -32,7 +32,7 @@ services:
   ## App Server (required)
   photoprism:
     ## Use photoprism/photoprism:preview for testing preview builds:
-    image: photoprism/photoprism:armv7
+    image: photoprism:armv7
     depends_on:
       - mariadb
     ## Only enable automatic restarts once your installation is properly
@@ -109,7 +109,7 @@ services:
   ## see https://docs.photoprism.org/getting-started/faq/#should-i-use-sqlite-mariadb-or-mysql
   mariadb:
     restart: unless-stopped
-    image: mariadb:latest
+    image: mysql:5.7
     security_opt:
       - seccomp:unconfined
       - apparmor:unconfined
