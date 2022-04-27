@@ -586,7 +586,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Downloads",
+					"bind": "/portainer/Movies",
 					"container": "/share"
 				}
 			],
