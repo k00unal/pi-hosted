@@ -689,7 +689,7 @@
 			],
 			"image": "ugeek/telegram-cli:arm",
 			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/freshrss-icon.png",
-			"name": "freshrss",
+			"name": "Telegram app",
 			"platform": "linux",
 			"ports": [
 				"8155:80/tcp"
