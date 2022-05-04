@@ -687,7 +687,7 @@
 					"name": "TZ"
 				}
 			],
-			"image": "ugeek/telegram-cli:arm",
+			"image": "mithundotdas/telegram-block:rpi",
 			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/freshrss-icon.png",
 			"name": "Telegram",
 			"platform": "linux",
