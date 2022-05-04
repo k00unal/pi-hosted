@@ -666,6 +666,45 @@
 		},
 		{
 			"categories": [
+				"Other"
+			],
+			"description": "Telegram Messaging App",
+			"env": [
+				{
+					"default": "1000",
+					"label": "PUID",
+					"name": "PUID"
+				},
+				{
+					"default": "1000",
+					"label": "PGID",
+					"name": "PGID"
+				}
+			],
+			"image": "ugeek/telegram-cli:arm",
+			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/freshrss-icon.png",
+			"name": "freshrss",
+			"platform": "linux",
+			"ports": [
+				"8155:80/tcp"
+			],
+			"restart_policy": "unless-stopped",
+			"title": "Telegram",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/portainer/Files/AppData/Config/telegram-cli",
+					"container": "/config"
+				},
+				{
+					"bind": "/portainer/Movies",
+					"container": "/Downloads"
+				}
+			],
+			"note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://www.freshrss.org/\" target=\"_blank\">https://www.freshrss.org/</a><br><b>Official Docker Documentation: </b><a href=\"https://github.com/FreshRSS/FreshRSS/tree/edge/Docker\" target=\"_blank\">https://github.com/FreshRSS/FreshRSS/tree/edge/Docker</a><br><br><br>"
+		},
+		{
+			"categories": [
 				"Other",
 				"Tools"
 			],
