@@ -689,7 +689,7 @@
 			],
 			"image": "ugeek/telegram-cli:arm",
 			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/freshrss-icon.png",
-			"name": "Telegram app",
+			"name": "Telegram",
 			"platform": "linux",
 			"ports": [
 				"8155:80/tcp"
@@ -707,7 +707,7 @@
 					"container": "/Downloads"
 				}
 			],
-			"note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://www.freshrss.org/\" target=\"_blank\">https://www.freshrss.org/</a><br><b>Official Docker Documentation: </b><a href=\"https://github.com/FreshRSS/FreshRSS/tree/edge/Docker\" target=\"_blank\">https://github.com/FreshRSS/FreshRSS/tree/edge/Docker</a><br><br><br>"
+			"note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/k00unal/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://www.telegram.org/\" target=\"_blank\">https://www.telegram.org.org/</a><br><b>Official Docker Documentation: </b><a href=\"https://hub.docker.com/r/ugeek/telegram-cli\" target=\"_blank\">https://hub.docker.com/r/ugeek/telegram-cli</a><br><br><br>"
 		},
 		{
 			"categories": [
