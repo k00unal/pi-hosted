@@ -679,6 +679,12 @@
 					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
+				},
+				{
+					"default": "Europe/Madrid",
+					"description": "Specify a timezone to use for example Europe/Madrid",
+					"label": "TZ",
+					"name": "TZ"
 				}
 			],
 			"image": "ugeek/telegram-cli:arm",
