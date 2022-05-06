@@ -234,7 +234,7 @@
 					"name": "PGID"
 				},
 				{
-					"default": "/code/src",
+					"default": "/portainer/code/src",
 					"label": "CALIBRE_DEVELOP_FROM",
 					"name": "CALIBRE_DEVELOP_FROM"
 				},
@@ -250,8 +250,8 @@
 			"name": "calibre",
 			"platform": "linux",
 			"ports": [
-				"7384:8080/tcp",
-				"7385:8081/tcp"
+				"8098:8080/tcp",
+				"8099:8081/tcp"
 			],
 			"restart_policy": "unless-stopped",
 			"title": "Calibre",
