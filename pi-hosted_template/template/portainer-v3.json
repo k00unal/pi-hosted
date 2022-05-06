@@ -246,7 +246,7 @@
 				}
 			],
 			"logo": "https://github.com/kovidgoyal/calibre/raw/master/resources/images/lt.png",
-			"image": "linuxserver/calibre:arm32v7",
+			"image": "linuxserver/calibre:arch",
 			"name": "calibre",
 			"platform": "linux",
 			"ports": [
