@@ -258,15 +258,15 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Development/Calibre",
+					"bind": "/portainer/Movies/Development/Calibre",
 					"container": "/code"
 				},
 				{
-					"bind": "/portainer/Books/Calibre Library",
+					"bind": "/portainer/Movies/Books/Calibre Library",
 					"container": "/config/Calibre Library"
 				},
 				{
-					"bind": "/portainer/Books",
+					"bind": "/portainer/Movies/Books",
 					"container": "/books"
 				},
 				{
