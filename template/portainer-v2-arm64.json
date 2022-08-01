@@ -6945,6 +6945,58 @@
 				}
 			],
 			"note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://wiki.znc.in/ZNC\" target=\"_blank\">https://wiki.znc.in/ZNC</a><br><b>Official Docker Documentation: </b><a href=\"https://docs.linuxserver.io/images/docker-znc\" target=\"_blank\">https://docs.linuxserver.io/images/docker-znc</a><br><br><br>"
+		},
+		{
+			"categories": [
+				"Other"
+			],
+			"description": "Telegram Messaging App",
+			"env": [
+				{
+					"default": "1000",
+					"label": "PUID",
+					"name": "PUID"
+				},
+				{
+					"default": "1000",
+					"label": "PGID",
+					"name": "PGID"
+				},
+				{
+					"TELEGRAM_DAEMON_API_ID": "YOUR API ID HERE",
+					"TELEGRAM_DAEMON_API_HASH": "YOUR API HASH HERE",
+					"TELEGRAM_DAEMON_CHANNEL": "YOUR CHANNEL ID HERE",
+					"TELEGRAM_DAEMON_DEST": "/downloads",
+					"TELEGRAM_DAEMON_SESSION_PATH": "/session"
+				},
+				{
+					"default": "Europe/Madrid",
+					"description": "Specify a timezone to use for example Europe/Madrid",
+					"label": "TZ",
+					"name": "TZ"
+				}
+			],
+			"image": "alfem/telegram-download-daemon:latest",
+			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/freshrss-icon.png",
+			"name": "Telegram",
+			"platform": "linux",
+			"ports": [
+				"8155:80/tcp"
+			],
+			"restart_policy": "unless-stopped",
+			"title": "Telegram",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/portainer/Files/AppData/sessions",
+					"container": "/sessions"
+				},
+				{
+					"bind": "/portainer/shared",
+					"container": "/Downloads"
+				}
+			],
+			"note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/k00unal/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://www.telegram.org/\" target=\"_blank\">https://www.telegram.org.org/</a><br><b>Official Docker Documentation: </b><a href=\"https://hub.docker.com/r/alfem/telegram-download-daemon\" target=\"_blank\">https://hub.docker.com/r/alfem/telegram-download-daemon</a><br><br><br>"
 		}
 	]
 }
