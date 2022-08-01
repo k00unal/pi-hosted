@@ -6968,14 +6968,24 @@
 					"name": "TELEGRAM_DAEMON_API_ID"
 				},
 				{
-					"TELEGRAM_DAEMON_API_HASH": "YOUR API HASH HERE",
+					"TELEGRAM_DAEMON_API_HASH": "TELEGRAM_DAEMON_API_HASH",
 					"label": "TELEGRAM_DAEMON_API_HASH",
 					"name": "TELEGRAM_DAEMON_API_HASH"
 				},
 				{
-					"TELEGRAM_DAEMON_CHANNEL": "YOUR CHANNEL ID HERE",
+					"TELEGRAM_DAEMON_CHANNEL": "TELEGRAM_DAEMON_CHANNEL",
 					"label": "TELEGRAM_DAEMON_CHANNEL",
 					"name": "TELEGRAM_DAEMON_CHANNEL"
+				},
+				{
+					"default": "rename",
+					"label": "TELEGRAM_DAEMON_DUPLICATES",
+					"name": "TELEGRAM_DAEMON_DUPLICATES"
+				},
+				{
+					"default": "/portainer/shared",
+					"label": "TELEGRAM_DAEMON_TEMP",
+					"name": "TELEGRAM_DAEMON_TEMP"
 				},
 				{
 					"default": "/portainer/shared",
