@@ -6993,7 +6993,7 @@
 					"name": "TELEGRAM_DAEMON_DEST"
 				},
 				{
-					"default": "/portainer/Files/AppData/sessions",
+					"default": "/portainer/Files/AppData/session",
 					"label": "TELEGRAM_DAEMON_SESSION_PATH",
 					"name": "TELEGRAM_DAEMON_SESSION_PATH"
 				},
@@ -7009,7 +7009,7 @@
 			"name": "Telegram",
 			"platform": "linux",
 			"ports": [
-				"8155:80/tcp"
+				"80:80/tcp"
 			],
 			"restart_policy": "unless-stopped",
 			"interactive": true,
@@ -7018,8 +7018,8 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/sessions",
-					"container": "/sessions"
+					"bind": "/portainer/Files/AppData/session",
+					"container": "/session"
 				},
 				{
 					"bind": "/portainer/shared",
