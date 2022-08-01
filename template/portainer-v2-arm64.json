@@ -6964,10 +6964,28 @@
 				},
 				{
 					"TELEGRAM_DAEMON_API_ID": "YOUR API ID HERE",
+					"label": "TELEGRAM_DAEMON_API_ID",
+					"name": "TELEGRAM_DAEMON_API_ID"
+				},
+				{
 					"TELEGRAM_DAEMON_API_HASH": "YOUR API HASH HERE",
+					"label": "TELEGRAM_DAEMON_API_HASH",
+					"name": "TELEGRAM_DAEMON_API_HASH"
+				},
+				{
 					"TELEGRAM_DAEMON_CHANNEL": "YOUR CHANNEL ID HERE",
+					"label": "TELEGRAM_DAEMON_CHANNEL",
+					"name": "TELEGRAM_DAEMON_CHANNEL"
+				},
+				{
 					"TELEGRAM_DAEMON_DEST": "/downloads",
-					"TELEGRAM_DAEMON_SESSION_PATH": "/session"
+					"label": "TELEGRAM_DAEMON_DEST",
+					"name": "TELEGRAM_DAEMON_DEST"
+				},
+				{
+					"TELEGRAM_DAEMON_DEST": "/session",
+					"label": "TELEGRAM_DAEMON_SESSION_PATH",
+					"name": "TELEGRAM_DAEMON_SESSION_PATH"
 				},
 				{
 					"default": "Europe/Madrid",
