@@ -6978,12 +6978,12 @@
 					"name": "TELEGRAM_DAEMON_CHANNEL"
 				},
 				{
-					"TELEGRAM_DAEMON_DEST": "/downloads",
+					"default": "/downloads",
 					"label": "TELEGRAM_DAEMON_DEST",
 					"name": "TELEGRAM_DAEMON_DEST"
 				},
 				{
-					"TELEGRAM_DAEMON_DEST": "/session",
+					"default": "/session",
 					"label": "TELEGRAM_DAEMON_SESSION_PATH",
 					"name": "TELEGRAM_DAEMON_SESSION_PATH"
 				},
