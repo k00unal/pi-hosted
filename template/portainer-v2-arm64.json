@@ -7002,6 +7002,8 @@
 				"8155:80/tcp"
 			],
 			"restart_policy": "unless-stopped",
+			"interactive": true,
+			"privileged": true,
 			"title": "Telegram",
 			"type": 1,
 			"volumes": [
