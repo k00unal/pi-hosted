@@ -2222,6 +2222,11 @@
 			"description": "A dead simple static HOMepage for your servER to keep your s ervices on hand, from a simple yaml configuration file.",
 			"env": [
 				{
+					"default": "0",
+					"label": "USER",
+					"name": "USER"
+				},
+				{
 					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
@@ -2241,6 +2246,8 @@
 				"8902:8080/tcp"
 			],
 			"restart_policy": "unless-stopped",
+			"privileged": true,
+			"interactive": true,
 			"title": "Homer",
 			"type": 1,
 			"volumes": [
