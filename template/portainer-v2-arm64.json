@@ -666,6 +666,64 @@
 		},
 		{
 			"categories": [
+				"Cloud",
+				"Books"
+			],
+			"description": "Calibre Web is a web app providing a clean interface for browsing, reading and downloading eBooks using an existing Calibre database.\n\n  [br][br]\n  [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]\n  [b]/config[/b] Where Calibre-web should store it's database[br]\n  [b]/books[/b] Path to your calibre library metadata.db file[br]",
+			"env": [
+				{
+					"default": "1000",
+					"label": "PUID",
+					"name": "PUID"
+				},
+				{
+					"default": "1000",
+					"label": "PGID",
+					"name": "PGID"
+				},
+				{
+					"default": "Europe/London",
+					"label": "TZ",
+					"name": "TZ"
+				},
+				{
+					"default": "calibre",
+					"label": "PASSWORD",
+					"name": "PASSWORD"
+				},
+				{
+					"CLI_ARGS": "CLI_ARGS",
+					"label": "CLI_ARGS",
+					"name": "CLI_ARGS"
+				}
+			],
+			"image": "lscr.io/linuxserver/calibre:latest",
+			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/calibre-web-icon.png",
+			"name": "calibre",
+			"privileged": true,
+			"interactive": true,
+			"platform": "linux",
+			"ports": [
+				"8083:8080/tcp",
+				"8084:8081/tcp"
+			],
+			"restart_policy": "unless-stopped",
+			"title": "Calibre",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/portainer/shared/books",
+					"container": "/books"
+				},
+				{
+					"bind": "/portainer/Files/AppData/Config/Calibre",
+					"container": "/config"
+				}
+			],
+			"note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://calibre-ebook.com/\" target=\"_blank\">https://calibre-ebook.com/</a><br><b>Official Docker Documentation: </b><a href=\"https://docs.linuxserver.io/images/docker-calibre-web\" target=\"_blank\">https://docs.linuxserver.io/images/docker-calibre-web</a><br><br><br>"
+		},
+		{
+			"categories": [
 				"Downloaders"
 			],
 			"description": "Cardigann, a server for adding extra indexers to Sonarr, SickRage and CouchPotato via Torznab and TorrentPotato proxies. Behind the scenes Cardigann logs in and runs searches and then transforms the results into a compatible format.",
@@ -1617,7 +1675,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Downloads",
+					"bind": "/portainer/shared",
 					"container": "/srv"
 				},
 				{
