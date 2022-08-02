@@ -4891,7 +4891,7 @@
 				},
 				{
 					"bind": "/portainer/Downloads",
-					"container": "/downloads"
+					"container": "/shared"
 				}
 			],
 			"note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://www.qbittorrent.org/\" target=\"_blank\">https://www.qbittorrent.org/</a><br><b>Official Docker Documentation: </b><a href=\"https://docs.linuxserver.io/images/docker-qbittorrent\" target=\"_blank\">https://docs.linuxserver.io/images/docker-qbittorrent</a><br><br><br>"
@@ -6893,19 +6893,19 @@
 					"container": "/app/appdata"
 				},
 				{
-					"bind": "/portainer/Files/AppData/Youtube/Video",
+					"bind": "/portainer/shared/Youtube/Video",
 					"container": "/app/video"
 				},
 				{
-					"bind": "/portainer/Files/AppData/Youtube/Subscriptions",
+					"bind": "/portainer/shared/Youtube/Subscriptions",
 					"container": "/app/subscriptions"
 				},
 				{
-					"bind": "/portainer/Files/AppData/Youtube/Users",
+					"bind": "/portainer/shared/Youtube/Users",
 					"container": "/app/users"
 				},
 				{
-					"bind": "/portainer/Files/AppData/Youtube/Audio",
+					"bind": "/portainer/shared/Youtube/Audio",
 					"container": "/app/audio"
 				}
 			],
