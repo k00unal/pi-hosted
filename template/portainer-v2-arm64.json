@@ -2223,13 +2223,13 @@
 			"env": [
 				{
 					"default": "1000",
-					"label": "GID",
-					"name": "GID"
+					"label": "PGID",
+					"name": "PGID"
 				},
 				{
 					"default": "1000",
-					"label": "UID",
-					"name": "UID"
+					"label": "PUID",
+					"name": "PUID"
 				}
 			],
 			"image": "b4bz/homer:latest",
