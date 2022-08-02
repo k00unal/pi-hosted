@@ -682,7 +682,7 @@
 					"name": "PGID"
 				},
 				{
-					"default": "Europe/London",
+					"default": "Asia/Calcutta",
 					"label": "TZ",
 					"name": "TZ"
 				},
@@ -716,7 +716,7 @@
 					"container": "/books"
 				},
 				{
-					"bind": "/portainer/Files/AppData/Config/Calibre",
+					"bind": "/portainer/shared/books/Config/Calibre",
 					"container": "/config"
 				}
 			],
