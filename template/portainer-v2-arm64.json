@@ -2681,7 +2681,7 @@
 					"name": "PGID"
 				},
 				{
-					"default": "America/New_York",
+					"default": "Asia/Calcutta",
 					"label": "TZ",
 					"name": "TZ"
 				}
@@ -2703,11 +2703,11 @@
 					"container": "/config"
 				},
 				{
-					"bind": "/portainer/TV",
+					"bind": "/portainer/shared/tvshows",
 					"container": "/data/tvshows"
 				},
 				{
-					"bind": "/portainer/Movies",
+					"bind": "/portainer/shared/movies",
 					"container": "/data/movies"
 				}
 			],
