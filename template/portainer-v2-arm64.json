@@ -7131,7 +7131,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/motioneye/recordings",
+					"bind": "/portainer/shared/motioneye/recordings",
 					"container": "/var/lib/motioneye"
 				},
 				{
