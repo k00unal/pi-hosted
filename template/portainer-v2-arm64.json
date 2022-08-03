@@ -7092,6 +7092,61 @@
 				}
 			],
 			"note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/k00unal/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://www.telegram.org/\" target=\"_blank\">https://www.telegram.org.org/</a><br><b>Official Docker Documentation: </b><a href=\"https://hub.docker.com/r/alfem/telegram-download-daemon\" target=\"_blank\">https://hub.docker.com/r/alfem/telegram-download-daemon</a><br><br><br>"
+		},
+		{
+			"categories": [
+				"CCTV"
+			],
+			"description": "MotionEye Docker Container for Raspberry Pi",
+			"env": [
+				{
+					"default": "1000",
+					"label": "PUID",
+					"name": "PUID"
+				},
+				{
+					"default": "1000",
+					"label": "PGID",
+					"name": "PGID"
+				},
+				{
+					"name": "TZ",
+					"label": "TZ",
+					"default": "Asia/Calcutta",
+					"description": "Specify a timezone to use for example Asia/Calcutta"
+				}
+			],
+			"image": "dontobi/motioneye.rpi:latest",
+			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/unifivideo-icon.png",
+			"name": "motioneye",
+			"note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://hub.docker.com/r/dontobi/motioneye.rpi\" target=\"_blank\">https://hub.docker.com/r/dontobi/motioneye.rpi/</a><br><b>Official Docker Documentation: </b><a href=\"https://hub.docker.com/r/dontobi/motioneye.rpi\" target=\"_blank\">https://hub.docker.com/r/dontobi/motioneye.rpi/</a><br><br>",
+			"platform": "linux",
+			"ports": [
+				"8765:8765/tcp"
+			],
+			"restart_policy": "unless-stopped",
+			"interactive": true,
+			"privileged": true,
+			"title": "motioneye",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/portainer/Files/AppData/Config/motioneye/recordings",
+					"container": "/var/lib/motioneye"
+				},
+				{
+					"bind": "/portainer/Files/AppData/Config/motioneye",
+					"container": "/etc/motioneye"
+				},
+				{
+					"bind": "/etc/timezone",
+					"container": "/etc/timezone:in"
+				},
+				{
+					"bind": "/etc/localtime",
+					"container": "/etc/localtime:in"
+				}
+			]
 		}
 	]
 }
