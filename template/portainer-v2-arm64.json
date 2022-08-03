@@ -7147,6 +7147,54 @@
 					"container": "/etc/localtime:in"
 				}
 			]
+		},
+		{
+			"categories": [
+				"video"
+			],
+			"description": "VLC player For home server",
+			"env": [
+				{
+					"default": "1000",
+					"label": "PUID",
+					"name": "PUID"
+				},
+				{
+					"default": "1000",
+					"label": "PGID",
+					"name": "PGID"
+				},
+				{
+					"name": "TZ",
+					"label": "TZ",
+					"default": "Asia/Calcutta",
+					"description": "Specify a timezone to use for example Asia/Calcutta"
+				}
+			],
+			"image": "kasmweb/vlc",
+			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/unifivideo-icon.png",
+			"name": "VLC",
+			"note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://hub.docker.com/r/kasmweb/vlc\" target=\"_blank\">https://hub.docker.com/r/kasmweb/vlc</a><br><b>Official Docker Documentation: </b><a href=\"https://hub.docker.com/r/kasmweb/vlc\" target=\"_blank\">https://hub.docker.com/r/kasmweb/vlc/</a><br><br>",
+			"platform": "linux",
+			"ports": [
+				"6901:6901/tcp"
+			],
+			"restart_policy": "unless-stopped",
+			"interactive": true,
+			"privileged": true,
+			"shm_size": "512m",
+			"title": "VLC",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/portainer/shared",
+					"container": "/shared"
+				},
+				{
+					"bind": "/portainer/Files/AppData/Config/vlc",
+					"container": "/config"
+				}
+			]
 		}
 	]
 }
