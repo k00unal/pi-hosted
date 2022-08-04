@@ -7209,6 +7209,53 @@
 					"container": "/config"
 				}
 			]
+		},
+		{
+			"categories": [
+				"Books"
+			],
+			"description": "Booksonic is a server and an app for streaming your audiobooks to any pc or android phone. Most of the functionality is also availiable on other platforms that have apps for subsonic",
+			"env": [
+				{
+					"default": "1000",
+					"label": "PUID",
+					"name": "PUID"
+				},
+				{
+					"default": "1000",
+					"label": "PGID",
+					"name": "PGID"
+				},
+				{
+					"default": "/openbooks/",
+					"label": "BASE_PATH",
+					"name": "BASE_PATH"
+				}
+			],
+			"image": "evanbuss/openbooks:latest",
+			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/booksonic.png",
+			"name": "openbooks",
+			"command": "--persist",
+			"privileged": true,
+			"interactive": true,
+			"platform": "linux",
+			"ports": [
+				"8087:80/tcp"
+			],
+			"restart_policy": "unless-stopped",
+			"title": "openbooks",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/portainer/shared/openbooks/",
+					"container": "/books"
+				},
+				{
+					"bind": "/portainer/Files/AppData/Config/openbooks",
+					"container": "/config"
+				}
+			],
+			"note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://hub.docker.com/r/evanbuss/openbooks\" target=\"_blank\">https://hub.docker.com/r/evanbuss/openbooks</a><br><b>Official Docker Documentation: </b><a href=\"https://hub.docker.com/r/evanbuss/openbooks\" target=\"_blank\">https://hub.docker.com/r/evanbuss/openbooks</a><br><br><br>"
 		}
 	]
 }
