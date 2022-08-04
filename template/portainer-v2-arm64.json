@@ -5896,6 +5896,11 @@
 					"container": "/config"
 				},
 				{
+					"bind": "/portainer/shared",
+					"container": "/sync/share"
+				},
+				{
+					"bind": "/portainer",
 					"container": "/sync"
 				}
 			],
