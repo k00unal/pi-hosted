@@ -414,7 +414,7 @@
 					"name": "PGID"
 				},
 				{
-					"default": "America/New_York",
+					"default": "Asia/Calcutta",
 					"label": "TZ",
 					"name": "TZ"
 				}
@@ -5793,11 +5793,11 @@
 					"container": "/dev/rtc"
 				},
 				{
-					"bind": "/portainer/TV",
+					"bind": "/portainer/shared/sonarr/TV",
 					"container": "/tv"
 				},
 				{
-					"bind": "/portainer/Downloads",
+					"bind": "/portainer/shared/sonarr/downloads",
 					"container": "/downloads"
 				}
 			],
