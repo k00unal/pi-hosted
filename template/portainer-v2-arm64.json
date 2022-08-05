@@ -2611,8 +2611,8 @@
 					"container": "/config"
 				},
 				{
-					"bind": "/portainer/Downloads",
-					"container": "/downloads"
+					"bind": "/portainer/shared",
+					"container": "/shared"
 				}
 			],
 			"note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://github.com/Jackett/Jackett\" target=\"_blank\">https://github.com/Jackett/Jackett</a><br><b>Official Docker Documentation: </b><a href=\"https://docs.linuxserver.io/images/docker-jackett\" target=\"_blank\">https://docs.linuxserver.io/images/docker-jackett</a><br><br><br>"
@@ -4959,7 +4959,7 @@
 					"container": "/config"
 				},
 				{
-					"bind": "/portainer/Downloads",
+					"bind": "/portainer/shared/torrents",
 					"container": "/shared"
 				}
 			],
@@ -5089,12 +5089,8 @@
 					"container": "/config"
 				},
 				{
-					"bind": "/portainer/Downloads",
-					"container": "/downloads"
-				},
-				{
-					"bind": "/portainer/Movies",
-					"container": "/movies"
+					"bind": "/portainer/shared",
+					"container": "/shared"
 				}
 			],
 			"note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://radarr.video/\" target=\"_blank\">https://radarr.video/</a><br><b>Official Docker Documentation: </b><a href=\"https://docs.linuxserver.io/images/docker-radarr\" target=\"_blank\">https://docs.linuxserver.io/images/docker-radarr</a><br><br><br>"
@@ -5789,16 +5785,8 @@
 					"container": "/config"
 				},
 				{
-					"bind": "/dev/rtc",
-					"container": "/dev/rtc"
-				},
-				{
-					"bind": "/portainer/shared/sonarr/TV",
-					"container": "/tv"
-				},
-				{
-					"bind": "/portainer/shared/sonarr/downloads",
-					"container": "/downloads"
+					"bind": "/portainer/shared",
+					"container": "/shared"
 				}
 			],
 			"note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://sonarr.tv/\" target=\"_blank\">https://sonarr.tv/</a><br><b>Official Docker Documentation: </b><a href=\"https://docs.linuxserver.io/images/docker-sonarr\" target=\"_blank\">https://docs.linuxserver.io/images/docker-sonarr</a><br><br><br>"
