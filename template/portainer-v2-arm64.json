@@ -435,12 +435,8 @@
 					"container": "/config"
 				},
 				{
-					"bind": "/portainer/TV",
-					"container": "/tv"
-				},
-				{
-					"bind": "/portainer/Movies",
-					"container": "/movies"
+					"bind": "/portainer/shared",
+					"container": "/shared"
 				}
 			],
 			"note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://www.bazarr.media/\" target=\"_blank\">https://www.bazarr.media/</a><br><b>Official Docker Documentation: </b><a href=\"https://wiki.bazarr.media/Getting-Started/Installation/Docker/docker/\" target=\"_blank\">https://wiki.bazarr.media/Getting-Started/Installation/Docker/docker/</a><br><br><br>"
