@@ -2663,12 +2663,12 @@
 					"container": "/config"
 				},
 				{
-					"bind": "/portainer/tvshows",
-					"container": "/portainer/shared/tvshows"
+					"bind": "/portainer/shared/tvshows",
+					"container": "/portainer/tvshows"
 				},
 				{
-					"bind": "/portainer/movies",
-					"container": "/portainer/shared/movies"
+					"bind": "/portainer/shared/movies",
+					"container": "/portainer/movies"
 				},
 				{
 					"bind": "/portainer;yes;no;yes;guest",
