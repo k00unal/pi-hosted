@@ -139,7 +139,7 @@
 				},
 				{
 					"bind": "/portainer/shared",
-					"container": "/shared"
+					"container": "/shared/others"
 				}
 			],
 			"note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://github.com/Jackett/Jackett\" target=\"_blank\">https://github.com/Jackett/Jackett</a><br><b>Official Docker Documentation: </b><a href=\"https://docs.linuxserver.io/images/docker-jackett\" target=\"_blank\">https://docs.linuxserver.io/images/docker-jackett</a><br><br><br>"
@@ -183,7 +183,7 @@
 				},
 				{
 					"bind": "/portainer/shared",
-					"container": "/shared"
+					"container": "/shared/others"
 				}
 			],
 			"note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://radarr.video/\" target=\"_blank\">https://radarr.video/</a><br><b>Official Docker Documentation: </b><a href=\"https://docs.linuxserver.io/images/docker-radarr\" target=\"_blank\">https://docs.linuxserver.io/images/docker-radarr</a><br><br><br>"
@@ -231,7 +231,7 @@
 				},
 				{
 					"bind": "/portainer/shared",
-					"container": "/shared"
+					"container": "/shared/others"
 				}
 			],
 			"note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://sonarr.tv/\" target=\"_blank\">https://sonarr.tv/</a><br><b>Official Docker Documentation: </b><a href=\"https://docs.linuxserver.io/images/docker-sonarr\" target=\"_blank\">https://docs.linuxserver.io/images/docker-sonarr</a><br><br><br>"
@@ -280,7 +280,7 @@
 				},
 				{
 					"bind": "/portainer/shared",
-					"container": "/shared"
+					"container": "/shared/others"
 				}
 			],
 			"note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://www.bazarr.media/\" target=\"_blank\">https://www.bazarr.media/</a><br><b>Official Docker Documentation: </b><a href=\"https://wiki.bazarr.media/Getting-Started/Installation/Docker/docker/\" target=\"_blank\">https://wiki.bazarr.media/Getting-Started/Installation/Docker/docker/</a><br><br><br>"
@@ -324,7 +324,7 @@
 				},
 				{
 					"bind": "/portainer/shared",
-					"container": "/shared"
+					"container": "/shared/others"
 				}
 			],
 			"note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://lidarr.audio/\" target=\"_blank\">https://lidarr.audio/</a><br><b>Official Docker Documentation: </b><a href=\"https://docs.linuxserver.io/images/docker-lidarr\" target=\"_blank\">https://docs.linuxserver.io/images/docker-lidarr</a><br><br><br>"
@@ -365,7 +365,7 @@
 				},
 				{
 					"bind": "/mnt/local_share/torrents",
-					"container": "/shared"
+					"container": "/shared/torrents"
 				},
 				{
 					"bind": "/portainer/shared",
