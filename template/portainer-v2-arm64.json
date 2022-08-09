@@ -2616,31 +2616,6 @@
 					"name": "PGID"
 				},
 				{
-					"default": "SYS_ADMIN",
-					"label": "cap-add",
-					"name": "cap-add"
-				},
-				{
-					"default": "DAC_READ_SEARCH",
-					"label": "cap-add",
-					"name": "cap-add"
-				},
-				{
-					"default": "guest;guest",
-					"label": "USER",
-					"name": "USER"
-				},
-				{
-					"default": "true",
-					"label": "PERMISSIONS",
-					"name": "PERMISSIONS"
-				},
-				{
-					"default": "portainer;/share;yes;no;yes;guest",
-					"label": "SHARE",
-					"name": "SHARE"
-				},
-				{
 					"default": "Asia/Calutta",
 					"label": "TZ",
 					"name": "TZ"
@@ -2663,16 +2638,20 @@
 					"container": "/config"
 				},
 				{
-					"bind": "/portainer/shared/tvshows",
+					"bind": "/mnt/local_share/tvshows",
 					"container": "/portainer/tvshows"
 				},
 				{
-					"bind": "/portainer/shared/movies",
+					"bind": "/mnt/local_share/movies",
 					"container": "/portainer/movies"
 				},
 				{
-					"bind": "/portainer;yes;no;yes;guest",
-					"container": "/portainer"
+					"bind": "/mnt/local_share",
+					"container": "/portainer/all"
+				},
+				{
+					"bind": "/portainer/shared",
+					"container": "/portainer/others"
 				}
 			],
 			"note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://jellyfin.org/\" target=\"_blank\">https://jellyfin.org/</a><br><b>Official Docker Documentation: </b><a href=\"https://docs.linuxserver.io/images/docker-jellyfin\" target=\"_blank\">https://docs.linuxserver.io/images/docker-jellyfin</a><br><br><br>"
