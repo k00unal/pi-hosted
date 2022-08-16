@@ -64,9 +64,9 @@ echo "#########################################"
 # sudo docker volume create portainer_data
 # sudo docker run -d -p 9000:9000 --restart unless-stopped -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer
 echo "to configure the internet access go to  <ip-adress>:80"
-sudo docker run -d --restart unless-stopped -e DEBUG=true -p 80:80 -v $(pwd)/www:/www txn2/asws:armhf-1.2.3
+sudo docker run -d --restart unless-stopped -e DEBUG=true -p 8199:80 --privileged --security-opt seccomp:unconfined -v $(pwd)/www:/www txn2/asws:armhf-1.2.3
 echo "CUPS running on  <ip-adress>:631"
-sudo docker run -d --restart unless-stopped -p 631:631 --privileged -v /var/run/dbus:/var/run/dbus -v /dev/bus/usb:/dev/bus/usb lemariva/rpi-cups
+sudo docker run -d --restart unless-stopped -p 632:631 --privileged --security-opt seccomp:unconfined -v /var/run/dbus:/var/run/dbus -v /dev/bus/usb:/dev/bus/usb tigerj/cups-airprint:latest
 
 echo "stoping wpa_supplicant..."
 # prevent wpa_supplicant from starting on boot
