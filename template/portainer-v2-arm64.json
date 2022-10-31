@@ -6611,6 +6611,45 @@
 		},
 		{
 			"categories": [
+				"Downloaders"
+			],
+			"description": "UdemyDownloader couses downloader.[br]\r\n\t\thttp://www.webgrabplus.com/[br]\r\n\t\t[b][span style='color: #E80000;']Directions:[/span][/b][br]\r\n\t\t[b]/config[/b] : This is where WebGrab+Plus will store it's configuration.[br][br]\r\n\t\t[b]/data[/b] : This is where tv_grab_wg script in the Tvheadend container looks for the guide.xml file.[br][br]",
+			"env": [
+				{
+					"default": "1000",
+					"label": "PUID",
+					"name": "PUID"
+				},
+				{
+					"default": "1000",
+					"label": "PGID",
+					"name": "PGID"
+				}
+			],
+			"image": "javedaliit/udemydocker",
+			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/webgrabplus.png",
+			"name": "UdemyDownloader",
+			"platform": "linux",
+			"ports": [
+				"8051:8080/tcp"
+			],
+			"restart_policy": "unless-stopped",
+			"title": "UdemyDownloader",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/portainer/Files/AppData/Config/UdemyDownloader",
+					"container": "/config"
+				},
+				{
+					"bind": "/portainer/shared/udemy",
+					"container": "/data"
+				}
+			],
+			"note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"http://www.webgrabplus.com/\" target=\"_blank\">http://www.webgrabplus.com/</a><br><b>Official Docker Documentation: </b><a href=\"https://docs.linuxserver.io/images/docker-webgrabplus\" target=\"_blank\">https://docs.linuxserver.io/images/docker-webgrabplus</a><br><br><br>"
+		},
+		{
+			"categories": [
 				"Other",
 				"Tools"
 			],
