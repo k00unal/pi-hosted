@@ -6626,7 +6626,7 @@
 					"name": "PGID"
 				}
 			],
-			"image": "javedaliit/udemydocker:v3",
+			"image": "flrnrud7/udemy-dl:latest",
 			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/webgrabplus.png",
 			"name": "UdemyDownloader",
 			"platform": "linux",
