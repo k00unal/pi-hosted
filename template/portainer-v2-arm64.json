@@ -6624,9 +6624,21 @@
 					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
+				},
+				{
+					"default": "example.domain.com",
+					"description": "Set here your DDNS domain",
+					"label": "WG_HOST",
+					"name": "WG_HOST"
+				},
+				{
+					"default": "ENTER AN ADMIN PASSWORD",
+					"description": "Leave blank to access WebUI without loggin",
+					"label": "PASSWORD",
+					"name": "PASSWORD"
 				}
 			],
-			"image": "migue19/udemy-devops",
+			"image": "flrnrud7/udemy-dl",
 			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/webgrabplus.png",
 			"name": "UdemyDownloader",
 			"platform": "linux",
@@ -7234,6 +7246,65 @@
 				},
 				{
 					"bind": "/portainer/Files/AppData/Config/vlc",
+					"container": "/config"
+				}
+			]
+		},
+		{
+			"categories": [
+				"video"
+			],
+			"description": "VLC player local For home server",
+			"env": [
+				{
+					"default": "1000",
+					"label": "PUID",
+					"name": "PUID"
+				},
+				{
+					"default": "1000",
+					"label": "PGID",
+					"name": "PGID"
+				},
+				{
+					"default": "vlc",
+					"label": "VNC_US",
+					"name": "VNC_US"
+				},
+				{
+					"default": "vlc",
+					"label": "VNC_PW",
+					"name": "VNC_PW"
+				},
+				{
+					"name": "TZ",
+					"label": "TZ",
+					"default": "Asia/Calcutta",
+					"description": "Specify a timezone to use for example Asia/Calcutta"
+				}
+			],
+			"image": "aperimau/vlc-multicast",
+			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/unifivideo-icon.png",
+			"name": "VLC",
+			"note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://hub.docker.com/r/kasmweb/vlc\" target=\"_blank\">https://hub.docker.com/r/kasmweb/vlc</a><br><b>Official Docker Documentation: </b><a href=\"https://hub.docker.com/r/kasmweb/vlc\" target=\"_blank\">https://hub.docker.com/r/kasmweb/vlc/</a><br><br>",
+			"platform": "linux",
+			"ports": [
+				"6901:6901/tcp"
+			],
+			"restart_policy": "unless-stopped",
+			"interactive": true,
+			"network": "host",
+			"privileged": true,
+			"shm_size": "512m",
+			"title": "VLC Local",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/portainer/shared",
+					"container": "/shared"
+				},
+				{
+					"bind": "/portainer/Files/AppData/Config/vlc-local",
 					"container": "/config"
 				}
 			]
