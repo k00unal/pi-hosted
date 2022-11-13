@@ -964,13 +964,13 @@
 			],
 			"image": "ydkn/cups:latest",
 			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/codiad-icon.png",
-			"name": "Print server",
+			"name": "PrintServer",
 			"platform": "linux",
 			"ports": [
 				"631:631/tcp"
 			],
 			"restart_policy": "unless-stopped",
-			"title": "Print server",
+			"title": "PrintServer",
 			"type": 1,
 			"volumes": [
 				{
