@@ -975,10 +975,6 @@
 			"volumes": [
 				{
 					"bind": "/portainer/Files/AppData/Config/cups",
-					"container": "/config"
-				},
-				{
-					"bind": "/portainer/shared/cups",
 					"container": "/etc/cups"
 				}
 			],
