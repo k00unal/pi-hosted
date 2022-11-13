@@ -925,11 +925,6 @@
 					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
-				},
-				{
-					"default": "mySecretPassword",
-					"label": "ADMIN_PASSWORD",
-					"name": "ADMIN_PASSWORD"
 				}
 			],
 			"image": "linuxserver/codiad:latest",
@@ -965,6 +960,11 @@
 					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
+				},
+				{
+					"default": "mySecretPassword",
+					"label": "ADMIN_PASSWORD",
+					"name": "ADMIN_PASSWORD"
 				}
 			],
 			"image": "ydkn/cups:latest",
