@@ -947,6 +947,45 @@
 		},
 		{
 			"categories": [
+				"Print"
+			],
+			"description": "Print Server is a with a small footprint and minimal requirements.\n  ",
+			"env": [
+				{
+					"default": "1000",
+					"label": "PUID",
+					"name": "PUID"
+				},
+				{
+					"default": "1000",
+					"label": "PGID",
+					"name": "PGID"
+				}
+			],
+			"image": "ydkn/cups:latest",
+			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/codiad-icon.png",
+			"name": "Print server",
+			"platform": "linux",
+			"ports": [
+				"631:631/tcp"
+			],
+			"restart_policy": "unless-stopped",
+			"title": "Print server",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/portainer/Files/AppData/Config/cups",
+					"container": "/config"
+				},
+				{
+					"bind": "/portainer/shared/cups",
+					"container": "/etc/cups"
+				}
+			],
+			"note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"http://codiad.com/\" target=\"_blank\">http://codiad.com/</a><br><b>Official Docker Documentation: </b><a href=\"https://github.com/Codiad/Codiad/wiki/Quick-installation-using-Docker\" target=\"_blank\">https://github.com/Codiad/Codiad/wiki/Quick-installation-using-Docker</a><br><br><br>"
+		},
+		{
+			"categories": [
 				"Cloud",
 				"Books"
 			],
