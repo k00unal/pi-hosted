@@ -7302,12 +7302,12 @@
 					"name": "PGID"
 				},
 				{
-					"default": "vlc",
+					"default": "kasm_user",
 					"label": "VNC_US",
 					"name": "VNC_US"
 				},
 				{
-					"default": "vlc",
+					"default": "password",
 					"label": "VNC_PW",
 					"name": "VNC_PW"
 				},
