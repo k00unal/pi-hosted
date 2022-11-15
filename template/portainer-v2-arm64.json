@@ -3807,6 +3807,55 @@
 		},
 		{
 			"categories": [
+				"video"
+			],
+			"description": "Restreamer is video player for pi.",
+			"env": [
+				{
+					"default": "admin",
+					"label": "RS_USERNAME",
+					"name": "RS_USERNAME"
+				},
+				{
+					"default": "admin",
+					"label": "RS_PASSWORD",
+					"name": "RS_PASSWORD"
+				}
+			],
+			"image": "datarhei/restreamer:latest",
+			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/n8n.jpg",
+			"name": "n8n",
+			"note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://n8n.io/\" target=\"_blank\">https://n8n.io/</a><br><b>Official Docker Documentation: </b><a href=\"https://docs.n8n.io/getting-started/installation/#docker\" target=\"_blank\">https://docs.n8n.io/getting-started/installation/#docker</a><br><br><br>Documentation is Available <a href='https://docs.n8n.io/'>here</a>",
+			"platform": "linux",
+			"ports": [
+				"8027:8080/tcp"
+			],
+			"restart_policy": "unless-stopped",
+			"title": "Restreamer",
+			"type": 1,
+			"mount": [
+				{
+					"Type": "tmpfs",
+					"Source": "",
+					"Destination": "/tmp/hls",
+					"Mode": "",
+					"RW": true,
+					"Propagation": ""
+				}
+			],
+			"volumes": [
+				{
+					"bind": "/portainer/Files/AppData/restreamer/db",
+					"container": "/restreamer/db"
+				},
+				{
+					"bind": "/portainer/shared",
+					"container": "/restreamer/db"
+				}
+			]
+		},
+		{
+			"categories": [
 				"Other",
 				"Tools"
 			],
