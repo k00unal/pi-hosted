@@ -3850,7 +3850,7 @@
 				},
 				{
 					"bind": "/portainer/shared",
-					"container": "/restreamer/db"
+					"container": "/restreamer"
 				}
 			]
 		},
