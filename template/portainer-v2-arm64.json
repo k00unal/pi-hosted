@@ -6731,7 +6731,7 @@
 					"name": "PASSWORD"
 				}
 			],
-			"image": "dennis13/udemy-docker:latest",
+			"image": "abcalajer/udemy-devops",
 			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/webgrabplus.png",
 			"name": "UdemyDownloader",
 			"platform": "linux",
