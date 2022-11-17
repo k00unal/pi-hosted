@@ -6731,7 +6731,7 @@
 					"name": "PASSWORD"
 				}
 			],
-			"image": "abcalajer/udemy-devops:0.0.1",
+			"image": "mishick165/udemy-course",
 			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/webgrabplus.png",
 			"name": "UdemyDownloader",
 			"platform": "linux",
