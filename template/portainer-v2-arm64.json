@@ -7345,6 +7345,70 @@
 		},
 		{
 			"categories": [
+				"kindle"
+			],
+			"description": "Kinss is a minimalist feed reader for kindle",
+			"env": [
+				{
+					"default": "1000",
+					"label": "PUID",
+					"name": "PUID"
+				},
+				{
+					"default": "1000",
+					"label": "PGID",
+					"name": "PGID"
+				},
+				{
+					"default": "kinss",
+					"label": "Fever_UesrName",
+					"name": "Fever_UesrName"
+				},
+				{
+					"default": "kinsses",
+					"label": "Fever_Password",
+					"name": "Fever_Password"
+				},
+				{
+					"default": "https://rss.othing.xyz/api/fever.php",
+					"label": "Fever_API_endpoint",
+					"name": "Fever_API_endpoint",
+					"description": "If you have changed the default client port don't forget to change it here too."
+				},
+				{
+					"name": "TZ",
+					"label": "TZ",
+					"default": "Asia/Calcutta",
+					"description": "Specify a timezone to use for example Asia/Calcutta"
+				}
+			],
+			"image": "intemd/kinss",
+			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/unifivideo-icon.png",
+			"name": "VLC",
+			"note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://hub.docker.com/r/kasmweb/vlc\" target=\"_blank\">https://hub.docker.com/r/kasmweb/vlc</a><br><b>Official Docker Documentation: </b><a href=\"https://hub.docker.com/r/kasmweb/vlc\" target=\"_blank\">https://hub.docker.com/r/kasmweb/vlc/</a><br><br>",
+			"platform": "linux",
+			"ports": [
+				"5000:5000/tcp"
+			],
+			"restart_policy": "unless-stopped",
+			"interactive": true,
+			"privileged": true,
+			"shm_size": "512m",
+			"title": "kinss-kindle",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/portainer/shared/kindle",
+					"container": "/shared"
+				},
+				{
+					"bind": "/portainer/Files/AppData/Config/Kindle",
+					"container": "/config"
+				}
+			]
+		},
+		{
+			"categories": [
 				"video"
 			],
 			"description": "VLC player local For home server",
