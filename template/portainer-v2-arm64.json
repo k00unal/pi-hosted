@@ -7404,6 +7404,10 @@
 				{
 					"bind": "/portainer/Files/AppData/Config/Kindle",
 					"container": "/config"
+				},
+				{
+					"bind": "/usr/bin/env/bin/python3",
+					"container": "/usr/bin/env/bin/python3"
 				}
 			]
 		},
