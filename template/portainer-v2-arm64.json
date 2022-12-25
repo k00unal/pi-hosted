@@ -2223,6 +2223,33 @@
 				"HomeAutomation"
 			],
 			"description": "Home Assistant Supervisor is a free and open-source software for home automation that is designed to be the central control system for smart home devices with focus on local control and privacy.",
+			"env": [
+				{
+					"default": "1000",
+					"label": "PUID",
+					"name": "PUID"
+				},
+				{
+					"default": "1000",
+					"label": "PGID",
+					"name": "PGID"
+				},
+				{
+					"default": "${SUPERVISOR_DATA}",
+					"label": "SUPERVISOR_SHARE",
+					"name": "SUPERVISOR_SHARE"
+				},
+				{
+					"default": "${SUPERVISOR_MACHINE}",
+					"label": "SUPERVISOR_MACHINE",
+					"name": "SUPERVISOR_MACHINE"
+				},
+				{
+					"default": "hassio_supervisor",
+					"label": "SUPERVISOR_NAME",
+					"name": "SUPERVISOR_NAME"
+				}
+			],
 			"image": "homeassistant/aarch64-hassio-supervisor:latest",
 			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/homeassistant.png",
 			"name": "home-assistant-supervisor",
@@ -2237,6 +2264,34 @@
 				{
 					"bind": "/portainer/Files/AppData/Config/HomeAssistantSupervisor/assets",
 					"container": "/config"
+				},
+				{
+					"bind": "/run/docker.sock",
+					"container": "/run/docker.sock:rw"
+				},
+				{
+					"bind": "/run/systemd-journal-gatewayd.sock",
+					"container": "/run/systemd-journal-gatewayd.sock:rw"
+				},
+				{
+					"bind": "/run/dbus",
+					"container": "/run/dbus:ro"
+				},
+				{
+					"bind": "/run/supervisor",
+					"container": "/run/os:rw"
+				},
+				{
+					"bind": "/run/udev",
+					"container": "/run/udev:ro"
+				},
+				{
+					"bind": "/etc/machine-id",
+					"container": "/etc/machine-id:ro"
+				},
+				{
+					"bind": "${SUPERVISOR_DATA}",
+					"container": "/data:rw"
 				},
 				{
 					"bind": "/portainer/shared",
