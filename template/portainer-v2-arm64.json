@@ -2210,6 +2210,37 @@
 				{
 					"bind": "/portainer/Files/AppData/Config/HomeAssistant/assets",
 					"container": "/config"
+				},
+				{
+					"bind": "/portainer/shared",
+					"container": "/shared"
+				}
+			],
+			"note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://www.home-assistant.io/\" target=\"_blank\">https://www.home-assistant.io/</a><br><b>Official Docker Documentation: </b><a href=\"https://www.home-assistant.io/installation/raspberrypi#install-home-assistant-container\" target=\"_blank\">https://www.home-assistant.io/installation/raspberrypi#install-home-assistant-container</a><br><br><br>"
+		},
+		{
+			"categories": [
+				"HomeAutomation"
+			],
+			"description": "Home Assistant Supervisor is a free and open-source software for home automation that is designed to be the central control system for smart home devices with focus on local control and privacy.",
+			"image": "homeassistant/aarch64-hassio-supervisor",
+			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/homeassistant.png",
+			"name": "home-assistant-supervisor",
+			"platform": "linux",
+			"ports": [
+				"8899:8124/tcp"
+			],
+			"restart_policy": "unless-stopped",
+			"title": "home-assistant-supervisor",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/portainer/Files/AppData/Config/HomeAssistantSupervisor/assets",
+					"container": "/config"
+				},
+				{
+					"bind": "/portainer/shared",
+					"container": "/shared"
 				}
 			],
 			"note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://www.home-assistant.io/\" target=\"_blank\">https://www.home-assistant.io/</a><br><b>Official Docker Documentation: </b><a href=\"https://www.home-assistant.io/installation/raspberrypi#install-home-assistant-container\" target=\"_blank\">https://www.home-assistant.io/installation/raspberrypi#install-home-assistant-container</a><br><br><br>"
