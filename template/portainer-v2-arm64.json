@@ -2235,9 +2235,9 @@
 					"name": "PGID"
 				},
 				{
-					"default": "/usr/share/hassio",
-					"label": "SUPERVISOR_SHARE",
-					"name": "SUPERVISOR_SHARE"
+					"default": "/portainer/shared/hassio",
+					"label": "SUPERVISOR_DATA",
+					"name": "SUPERVISOR_DATA"
 				},
 				{
 					"default": "/portainer/shared/hassio",
