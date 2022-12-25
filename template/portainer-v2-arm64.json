@@ -2235,12 +2235,17 @@
 					"name": "PGID"
 				},
 				{
-					"default": "${SUPERVISOR_DATA}",
+					"default": "/usr/share/hassio",
 					"label": "SUPERVISOR_SHARE",
 					"name": "SUPERVISOR_SHARE"
 				},
 				{
-					"default": "${SUPERVISOR_MACHINE}",
+					"default": "/portainer/shared/hassio",
+					"label": "SUPERVISOR_SHARE",
+					"name": "SUPERVISOR_SHARE"
+				},
+				{
+					"default": "raspberrypi4-64",
 					"label": "SUPERVISOR_MACHINE",
 					"name": "SUPERVISOR_MACHINE"
 				},
