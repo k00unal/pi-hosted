@@ -2290,7 +2290,7 @@
 					"container": "/etc/machine-id:ro"
 				},
 				{
-					"bind": "/portainer/shared",
+					"bind": "/portainer/shared/hassio",
 					"container": "/data:rw"
 				},
 				{
