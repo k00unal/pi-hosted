@@ -2236,11 +2236,6 @@
 				},
 				{
 					"default": "/portainer/shared/hassio",
-					"label": "SUPERVISOR_DATA",
-					"name": "SUPERVISOR_DATA"
-				},
-				{
-					"default": "/portainer/shared/hassio",
 					"label": "SUPERVISOR_SHARE",
 					"name": "SUPERVISOR_SHARE"
 				},
@@ -2295,7 +2290,7 @@
 					"container": "/etc/machine-id:ro"
 				},
 				{
-					"bind": "${SUPERVISOR_DATA}",
+					"bind": "/portainer/shared",
 					"container": "/data:rw"
 				},
 				{
