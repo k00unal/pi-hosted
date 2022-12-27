@@ -5432,7 +5432,7 @@
 					"name": "MENU_VERSION"
 				}
 			],
-			"image": "linuxserver/netbootxyz",
+			"image": "lscr.io/linuxserver/netbootxyz:latest",
 			"logo": "https://raw.githubusercontent.com/novaspirit/pi-hosted/master/images/rdesktop.png",
 			"name": "netbootxyz",
 			"platform": "linux",
