@@ -5341,6 +5341,72 @@
 		},
 		{
 			"categories": [
+				"Network boot"
+			],
+			"description": "raspberrypi-netboot is an pxe network boot container for booting raspbian custom image downladed seperately with mounting a custom RaspiOS.img download your image from raspberrypi.org(this will perform a lot faster !!!) extract files from a RaspiOS.img into the tftpboot and nfsroot directory for RPi pxe-boot",
+			"env": [
+				{
+					"default": "1000",
+					"label": "PUID",
+					"name": "PUID"
+				},
+				{
+					"default": "1000",
+					"label": "PGID",
+					"name": "PGID"
+				},
+				{
+					"default": "America/New_York",
+					"label": "TZ",
+					"name": "TZ"
+				},
+				{
+					"default": "/nfsroot/raspberrypi",
+					"label": "NFS_ROOT",
+					"name": "NFS_ROOT"
+				},
+				{
+					"default": "4",
+					"label": "NFS_VERSION",
+					"name": "NFS_VERSION"
+				},
+				{
+					"default": "192.168.0.200",
+					"label": "NFS_IP",
+					"name": "NFS_IP"
+				}
+			],
+			"image": "3x3cut0r/raspberrypi-netboot:latest",
+			"logo": "https://raw.githubusercontent.com/novaspirit/pi-hosted/master/images/rdesktop.png",
+			"name": "raspberrypi-netboot",
+			"platform": "linux",
+			"privileged": true,
+			"ports": [],
+			"restart_policy": "unless-stopped",
+			"title": "raspberrypi-netboot",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/portainer/Files/AppData/Config/RDesktop/config",
+					"container": "/config"
+				},
+				{
+					"bind": "/portainer/shared/nfsroot",
+					"container": "/netboot/nfsroot"
+				},
+				{
+					"bind": "/portainer/shared/tftpboot",
+					"container": "/netboot/tftpboot"
+				},
+				{
+					"bind": "/portainer/shared/raspberrypi-netboot-zip",
+					"container": "/netboot/raspios.zip"
+				}
+			],
+			"note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"http://xrdp.org/\" target=\"_blank\">http://xrdp.org/</a><br><b>Official Docker Documentation: </b><a href=\"https://docs.linuxserver.io/images/docker-rdesktop\" target=\"_blank\">https://docs.linuxserver.io/images/docker-rdesktop</a><br><br><br>"
+		},
+		{
+			"categories": [
 				"Other",
 				"Tools"
 			],
