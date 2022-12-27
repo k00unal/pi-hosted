@@ -5430,6 +5430,11 @@
 					"default": "2.0.59",
 					"label": "MENU_VERSION",
 					"name": "MENU_VERSION"
+				},
+				{
+					"default": "30000:30010",
+					"label": "PORT_RANGE",
+					"name": "PORT_RANGE"
 				}
 			],
 			"image": "lscr.io/linuxserver/netbootxyz:latest",
