@@ -5407,6 +5407,58 @@
 		},
 		{
 			"categories": [
+				"Network boot"
+			],
+			"description": "The netboot.xyz docker image allows you to easily set up a local instance of netboot.xyz. The container is a small helper application written in node.js. It provides a simple web interface for editing menus on the fly, retrieving the latest menu release of netboot.xyz, and enables mirroring the downloadable assets from Github to your location machine for faster booting of assets.",
+			"env": [
+				{
+					"default": "1000",
+					"label": "PUID",
+					"name": "PUID"
+				},
+				{
+					"default": "1000",
+					"label": "PGID",
+					"name": "PGID"
+				},
+				{
+					"default": "Asia/Calcutta",
+					"label": "TZ",
+					"name": "TZ"
+				},
+				{
+					"default": "2.0.59",
+					"label": "MENU_VERSION",
+					"name": "MENU_VERSION"
+				}
+			],
+			"image": "linuxserver/netbootxyz",
+			"logo": "https://raw.githubusercontent.com/novaspirit/pi-hosted/master/images/rdesktop.png",
+			"name": "netbootxyz",
+			"platform": "linux",
+			"privileged": true,
+			"ports": [
+				"3000:3000/tcp",
+				"69:69/udp",
+				"8180:80/tcp"
+			],
+			"restart_policy": "unless-stopped",
+			"title": "netbootxyz",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/portainer/Files/AppData/Config/netbootxyz",
+					"container": "/config"
+				},
+				{
+					"bind": "/portainer/shared/netbootxyz",
+					"container": "/assets"
+				}
+			],
+			"note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"http://xrdp.org/\" target=\"_blank\">http://xrdp.org/</a><br><b>Official Docker Documentation: </b><a href=\"https://docs.linuxserver.io/images/docker-rdesktop\" target=\"_blank\">https://docs.linuxserver.io/images/docker-rdesktop</a><br><br><br>"
+		},
+		{
+			"categories": [
 				"Other",
 				"Tools"
 			],
