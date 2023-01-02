@@ -949,7 +949,7 @@
 			"categories": [
 				"Print"
 			],
-			"description": "Print Server is a with a small footprint and minimal requirements.\n  ",
+			"description": "Print Server is a with a small footprint and minimal requirements.https://github.com/unixorn/docker-cupsd docs on https://unixorn.github.io/post/cupsd-setup/\n  ",
 			"env": [
 				{
 					"default": "1000",
@@ -962,14 +962,20 @@
 					"name": "PGID"
 				},
 				{
-					"default": "mySecretPassword",
+					"default": "print",
+					"label": "ADMIN_USERNAME",
+					"name": "ADMIN_USERNAME"
+				},
+				{
+					"default": "print",
 					"label": "ADMIN_PASSWORD",
 					"name": "ADMIN_PASSWORD"
 				}
 			],
-			"image": "ydkn/cups:latest",
+			"image": "unixorn/cupsd",
 			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/codiad-icon.png",
 			"name": "PrintServer",
+			"privileged": true,
 			"platform": "linux",
 			"ports": [
 				"631:631/tcp"
@@ -979,15 +985,23 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/cups",
-					"container": "/etc/cups"
+					"bind": "/portainer/Files/AppData/Config/cups/printers.conf",
+					"container": "/etc/cups/printers.conf"
+				},
+				{
+					"bind": "/var/run/dbus",
+					"container": "/var/run/dbus"
+				},
+				{
+					"bind": "/dev/bus/usb",
+					"container": "/dev/bus/usb"
 				},
 				{
 					"bind": "/portainer/shared/cups",
-					"container": "/etc/cups"
+					"container": "/shared"
 				}
 			],
-			"note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"http://codiad.com/\" target=\"_blank\">http://codiad.com/</a><br><b>Official Docker Documentation: </b><a href=\"https://github.com/Codiad/Codiad/wiki/Quick-installation-using-Docker\" target=\"_blank\">https://github.com/Codiad/Codiad/wiki/Quick-installation-using-Docker</a><br><br><br>"
+			"note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://unixorn.github.io/post/cupsd-setup/\" target=\"_blank\">https://unixorn.github.io/post/cupsd-setup//</a><br><b>Official Docker Documentation: </b><a href=\"https://github.com/unixorn/docker-cupsd\" target=\"_blank\">https://github.com/unixorn/docker-cupsd</a><br><br><br>"
 		},
 		{
 			"categories": [
