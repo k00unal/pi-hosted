@@ -121,6 +121,74 @@ Created at: Mon Nov 14 21:06:26 2022
 Printed at: Mon Nov 14 21:06:26 2022
 
 
+### To printer tp pi
+# Updates list of packages
+sudo apt-get update
+# Updates packages
+sudo apt-get upgrade
+# Install CUPS
+sudo apt-get install cups
+# Give pi user admin rights by adding to lpadmin group
+sudo usermod -a -G lpadmin pi
+
+# Open cupsd.conf in Nano
+sudo nano /etc/cups/cupsd.conf
+
+# Only listen for connections from the local machine
+#Listen localhost:631
+Port 631
+
+# Restrict access to the server...                                                                                                                           
+ <Location />                                                                                                                                                 
+   Order allow,deny                                                                                                                                           
+   Allow @local                                                                                                                                               
+ </Location>                                                                                                                                                  
+                                                                                                                                                              
+ # Restrict access to the admin pages...                                                                                                                      
+ <Location /admin>                                                                                                                                            
+   Order allow,deny                                                                                                                                           
+   Allow @local                                                                                                                                               
+ </Location>                                                                                                                                                  
+                                                                                                                                                              
+ # Restrict access to configuration files...                                                                                                                  
+ <Location /admin/conf>                                                                           
+   AuthType Default                                                                                                                                           
+   Require user @SYSTEM                                                                                                                                       
+   Order allow,deny                                                                                                                                           
+   Allow @local                                                                                                                                               
+ </Location>
+
+With that out of the way, all we have to is restart cups to make the config changes take effect:
+
+sudo /etc/init.d/cups restart
+
+
+You can check your connected USB devices by running the “lsusb” command.
+
+Great! If everything worked out, you should now be able to head over to the web interface by pointing your browser towards https://raspberrypi.local:631
+
+##2. Make you printer available for Air print¶
+This step is incredibly easy, just one command: sudo apt-get install avahi-discover avahi-daemon
+
+mainarticle
+https://readthedocs.vinczejanos.info/Old_Blog_Contents/raspberry/Raspberry_Pi_2_As_Print_Server_Airprint/
+
+I found some articles about â€œcups airprint setupâ€ which are much complected, but somehow in my case it works with installing only the avahi damon and discover. Links:
+
+http://iain.polevaultweb.com/2014/03/setting-raspberry-pi-print-server-airprint-support/
+http://www.lynsayshepherd.com/blog/2015/10/18/wireless-printingairprint-server-via-the-raspberry-pi-updated-guide/
+https://wiki.debian.org/AirPrint
+NOTE: Of course you have to connect your RasPI to the same network which used by your Wifi, and connect your phone to it in order to make everything work fine.
+
+sudo reboot to take effect
+
+after you add the printer via url 
+
+Canon_LBP6030_6040_6018L_homepi select this in rpi printer window to make as default
+ then test with your molbile and printer Should work on airprint
+
+ ## To install hp driver : sudo apt install hplip
+
 ### To add skacanin capabilty in raspberry pi
 
 To get started, install SANE and look for your scanner.
@@ -136,6 +204,9 @@ scanimage >image.jpg --format jpeg
 # to scan and save image via gui
 sudo apt update
 sudo apt install skanlite
+
+https://pimylifeup.com/raspberry-pi-scanner-server/#testingscannerwithsane
+
 
 
 
