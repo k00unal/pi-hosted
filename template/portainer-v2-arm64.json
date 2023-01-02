@@ -974,14 +974,14 @@
 			],
 			"image": "unixorn/cupsd",
 			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/codiad-icon.png",
-			"name": "PrintServer",
+			"name": "Print",
 			"privileged": true,
 			"platform": "linux",
 			"ports": [
 				"631:631/tcp"
 			],
 			"restart_policy": "unless-stopped",
-			"title": "PrintServer",
+			"title": "Print",
 			"type": 1,
 			"volumes": [
 				{
@@ -995,10 +995,6 @@
 				{
 					"bind": "/dev/bus/usb",
 					"container": "/dev/bus/usb"
-				},
-				{
-					"bind": "/portainer/shared/cups",
-					"container": "/shared"
 				}
 			],
 			"note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://unixorn.github.io/post/cupsd-setup/\" target=\"_blank\">https://unixorn.github.io/post/cupsd-setup//</a><br><b>Official Docker Documentation: </b><a href=\"https://github.com/unixorn/docker-cupsd\" target=\"_blank\">https://github.com/unixorn/docker-cupsd</a><br><br><br>"
