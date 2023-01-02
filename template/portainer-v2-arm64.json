@@ -982,7 +982,7 @@
 			],
 			"restart_policy": "unless-stopped",
 			"title": "Print",
-			"type": 2,
+			"type": 1,
 			"volumes": [
 				{
 					"bind": "/portainer/Files/AppData/Config/cups/printers.conf",
