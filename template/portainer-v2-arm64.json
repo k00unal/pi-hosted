@@ -949,7 +949,7 @@
 			"categories": [
 				"Print"
 			],
-			"description": "Print Server is a with a small footprint and minimal requirements.https://github.com/unixorn/docker-cupsd docs on https://unixorn.github.io/post/cupsd-setup/\n  ",
+			"description": "Print Server works only by directly installing to pi is a with a small footprint and minimal requirements.https://github.com/unixorn/docker-cupsd docs on https://unixorn.github.io/post/cupsd-setup/\n  ",
 			"env": [
 				{
 					"default": "1000",
