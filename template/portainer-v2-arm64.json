@@ -912,10 +912,6 @@
 					"container": "/shared"
 				},
 				{
-					"bind": "/portainer",
-					"container": "/shared"
-				},
-				{
 					"bind": "/home",
 					"container": "/sharehome"
 				}
