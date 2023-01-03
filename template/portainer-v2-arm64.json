@@ -906,6 +906,18 @@
 				{
 					"bind": "/portainer/Files/AppData/Config/Code-Server",
 					"container": "/config"
+				},
+				{
+					"bind": "/portainer",
+					"container": "/shared"
+				},
+				{
+					"bind": "/portainer",
+					"container": "/shared"
+				},
+				{
+					"bind": "/home",
+					"container": "/sharehome"
 				}
 			],
 			"note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://coder.com/\" target=\"_blank\">https://coder.com/</a><br><b>Official Docker Documentation: </b><a href=\"https://docs.linuxserver.io/images/docker-code-server\" target=\"_blank\">https://docs.linuxserver.io/images/docker-code-server</a><br><br><br>"
