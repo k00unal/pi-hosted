@@ -7249,7 +7249,7 @@
 					"name": "PGID"
 				},
 				{
-					"default": "America/New_York",
+					"default": "Asia/Calcutta",
 					"label": "TZ",
 					"name": "TZ"
 				},
